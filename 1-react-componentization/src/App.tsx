@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { fellowship, type Hero } from './data/fellowship.ts';
 import './App.css';
 import Navbar from './components/Navbar.tsx';
+import SearchBar from './components/SearchBar.tsx';
 
 const App = () => {
   const [missionTeam, setMissionTeam] = useState<Hero[]>([]);
@@ -40,12 +41,8 @@ const App = () => {
     <div>
       <Navbar />
       <h2>All Heroes</h2>
-      <input
-        type="text"
-        placeholder="Search heroes..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <SearchBar value={search} onChange={setSearch} placeHolder={"Search heroes..."}/>
+      
       <ul>
         {filteredHeroes.map((hero) => {
           const alreadyInMission = missionTeam.some((h) => h.id === hero.id);
