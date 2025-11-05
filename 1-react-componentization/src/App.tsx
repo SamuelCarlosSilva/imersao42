@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { fellowship, type Hero } from './data/fellowship.ts';
 import './App.css';
+import Navbar from './components/Navbar.tsx';
 
 const App = () => {
   const [missionTeam, setMissionTeam] = useState<Hero[]>([]);
@@ -37,10 +38,7 @@ const App = () => {
 
   return (
     <div>
-      <nav>
-        <h1>Fellowship Inventory</h1>
-      </nav>
-
+      <Navbar />
       <h2>All Heroes</h2>
       <input
         type="text"
