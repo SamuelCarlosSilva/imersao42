@@ -5,6 +5,7 @@ import Navbar from './components/Navbar.tsx';
 import SearchBar from './components/SearchBar.tsx';
 import HeroCard from './components/HeroCard.tsx';
 import HeroList from './components/HeroList.tsx';
+import AllHeroesContainer from './components/AllHeroesContainer.tsx';
 
 const App = () => {
   const [missionTeam, setMissionTeam] = useState<Hero[]>([]);
@@ -42,9 +43,13 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <h2>All Heroes</h2>
-      <SearchBar value={search} onChange={setSearch} placeHolder={"Search heroes..."}/>
-      <HeroList filteredHeroes={filteredHeroes} missionTeam={missionTeam} addToMission={addToMission}/>
+      <AllHeroesContainer 
+      search={search} 
+      setSearch={setSearch} 
+      filteredHeroes={filteredHeroes} 
+      missionTeam={missionTeam} 
+      addToMission={addToMission}
+      />
 
       <h2>Mission Team</h2>
       {message && (
