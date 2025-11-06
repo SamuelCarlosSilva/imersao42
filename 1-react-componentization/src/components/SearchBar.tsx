@@ -8,7 +8,7 @@ const SearchBar = ({value, onChange, placeHolder}: SearchBarProps)  => {
     return (
         <input
         type="text"
-        placeholder={placeHolder||"Search..."}
+        placeholder={placeHolder||"Search heroes..."}
         value={value}
         onChange={(e) => onChange(e.target.value)}
       />

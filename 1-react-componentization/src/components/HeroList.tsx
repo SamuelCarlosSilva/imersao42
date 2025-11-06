@@ -1,26 +1,26 @@
 
-import type { Hero } from "../interface/Hero";
-import HeroCard from "./HeroCard";
+import type { Hero } from '../interface/Hero';
+import HeroCard from './HeroCard';
 
 type HeroListProps = {
-    filteredHeroes: Hero[]
-    missionTeam: Hero[]
-    addToMission: (hero: Hero) => void
-}
+  heroes: Hero[];
+  missionTeam: Hero[];
+  onAdd: (hero: Hero) => void;
+};
 
-const HeroList = ({filteredHeroes, missionTeam, addToMission}: HeroListProps) =>{
-    return (
-        <ul>
-        {filteredHeroes.map((hero) => {
-          const alreadyInMission = missionTeam.some((h) => h.id === hero.id);
-          return (
-            <>
-            <HeroCard hero={hero} isInMission={alreadyInMission} addToMission={addToMission}/>
-            </>
-          );
-        })}
-      </ul>
-    )
-}
+const HeroList = ({ heroes, missionTeam, onAdd }: HeroListProps) => {
+  return (
+    <ul>
+      {heroes.map((hero) => (
+        <HeroCard
+          key={hero.id}
+          hero={hero}
+          isInMission={missionTeam.some((h) => h.id === hero.id)}
+          onAdd={onAdd}
+        />
+      ))}
+    </ul>
+  );
+};
 
-export default HeroList
+export default HeroList;
