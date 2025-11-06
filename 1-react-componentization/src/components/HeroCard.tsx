@@ -5,6 +5,7 @@ type HeroCardProps = {
    isInMission?: boolean
    addToMission?: (hero: Hero) => void
    removeFromMission?: (heroId: number) => void
+   onRemove?: (heroId: number) => void
 }
 
 const HeroCard = ({hero, isInMission, addToMission, removeFromMission}: HeroCardProps) => {
