@@ -1,4 +1,4 @@
-import type { Hero } from "../data/fellowship"
+import type { Hero } from "../interface/Hero"
 
 type HeroCardProps = {
    hero: Hero

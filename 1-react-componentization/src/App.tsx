@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { fellowship, type Hero } from './data/fellowship.ts';
 import './App.css';
 import Navbar from './components/Navbar.tsx';
-import SearchBar from './components/SearchBar.tsx';
 import HeroCard from './components/HeroCard.tsx';
-import HeroList from './components/HeroList.tsx';
 import AllHeroesContainer from './components/AllHeroesContainer.tsx';
+import type { Hero } from './interface/Hero.ts';
+import { fellowship } from './data/fellowship.ts';
 
 const App = () => {
   const [missionTeam, setMissionTeam] = useState<Hero[]>([]);

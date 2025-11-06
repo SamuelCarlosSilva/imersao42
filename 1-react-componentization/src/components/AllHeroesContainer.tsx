@@ -1,4 +1,5 @@
-import type { Hero } from "../data/fellowship"
+
+import type { Hero } from "../interface/Hero"
 import HeroList from "./HeroList"
 import SearchBar from "./SearchBar"
 
