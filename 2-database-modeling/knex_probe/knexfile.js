@@ -6,9 +6,12 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './dev.sqlite3'
+      host: 'localhost',
+      user: 'postgres',
+      password:  process.env.PASSWORD,
+      database: 'myForm'
     }
   },
 
