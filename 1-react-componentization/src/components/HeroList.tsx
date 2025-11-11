@@ -1,12 +1,12 @@
 
-import type { Hero } from '../interface/Hero';
-import HeroCard from './HeroCard';
+import type { Hero } from '../interface/Hero'
+import HeroCard from './HeroCard'
 
 type HeroListProps = {
-  heroes: Hero[];
-  missionTeam: Hero[];
-  onAdd: (hero: Hero) => void;
-};
+  heroes: Hero[]
+  missionTeam: Hero[]
+  onAdd: (hero: Hero) => void
+}
 
 const HeroList = ({ heroes, missionTeam, onAdd }: HeroListProps) => {
   return (
@@ -20,7 +20,7 @@ const HeroList = ({ heroes, missionTeam, onAdd }: HeroListProps) => {
         />
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default HeroList;
+export default HeroList
