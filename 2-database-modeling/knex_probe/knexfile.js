@@ -1,3 +1,5 @@
+
+require('dotenv').config()
 // Update with your config settings.
 
 /**
@@ -10,8 +12,8 @@ module.exports = {
     connection: {
       host: 'localhost',
       user: 'postgres',
-      password:  process.env.PASSWORD,
-      database: 'myForm'
+      password: process.env.PASSWORD,
+      database: 'myForms'
     }
   },
 
